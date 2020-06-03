@@ -28,9 +28,10 @@ const Header = () => {
 const styles = StyleSheet.create({
   header: {
     color: "white",
-    fontSize: "5vw",
+    fontSize: 25,
     fontFamily: "CinzelDecorative_900Black",
-    padding: "10px",
+    padding: 10,
+    paddingTop: 50
   },
   background: {
     flexDirection: "row",
@@ -40,9 +41,10 @@ const styles = StyleSheet.create({
   },
   sub: {
     color: "white",
-    fontSize: "5vw",
+    fontSize: 25,
     fontFamily: "EBGaramond_400Regular",
-    padding: "10px",
+    padding: 10,
+    paddingTop: 50
   },
 });
 
