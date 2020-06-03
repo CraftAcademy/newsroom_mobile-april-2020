@@ -1,31 +1,53 @@
 {
-  "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
     "web": "expo start --web",
-    "eject": "expo eject",
     "cypress": "cypress open"
   },
   "dependencies": {
+    "expo": "~37.0.3",
+    "expo-splash-screen": "^0.2.3",
+    "expo-updates": "~0.2.0",
+    "react": "~16.9.0",
+    "react-dom": "~16.9.0",
+    "react-native": "~0.61.5",
+    "react-native-gesture-handler": "~1.6.0",
+    "react-native-reanimated": "~1.7.0",
+    "react-native-screens": "~2.2.0",
+    "react-native-unimodules": "~0.9.0",
+    "react-native-web": "~0.11.7",
     "@expo-google-fonts/cinzel": "^0.1.0",
     "@expo-google-fonts/cinzel-decorative": "^0.1.0",
     "@expo-google-fonts/eb-garamond": "^0.1.0",
     "axios": "^0.19.2",
     "decorative": "^0.1.6",
-    "expo": "~37.0.3",
     "expo-font": "~8.1.0",
-    "react": "~16.9.0",
-    "react-dom": "~16.9.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-37.0.1.tar.gz",
-    "react-native-axios": "^0.17.1",
-    "react-native-web": "~0.11.7"
+    "react-native-axios": "^0.17.1"
   },
   "devDependencies": {
     "@babel/core": "^7.8.6",
+    "babel-jest": "~25.2.6",
+    "jest": "^26.0.1",
+    "react-test-renderer": "~16.9.0",
     "babel-preset-expo": "~8.1.0",
-    "cypress": "^4.7.0"
+    "cypress": "^4.7.0",
+    "detox": "^16.7.2"
   },
-  "private": true
+  "private": true,
+  "detox": {
+    "testRunner": "jest",
+    "runnerConfig": "e2e/config.json",
+    "configurations": {
+      "ios.sim.debug": {
+        "binaryPath": "ios/build/Debug-iphonesimulator/newsroom-april.app",
+        "build": "xcodebuild -workspace ios/newsroomMobileApril2020.xcworkspace -scheme newsroomMobileApril2020 -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+        "type": "ios.simulator",
+        "device": {
+          "type": "iPhone 11 Pro"
+        }
+      }
+    }
+  }
 }
