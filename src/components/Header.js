@@ -17,7 +17,7 @@ const Header = () => {
     return <AppLoading />;
   } else {
     return (
-      <View style={styles.background}>
+      <View testID="welcome" style={styles.background}>
         <Text style={styles.header}>DNS </Text>
         <Text style={styles.sub}> Daily News Sense</Text>
       </View>

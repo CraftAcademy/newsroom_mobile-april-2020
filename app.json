@@ -22,7 +22,12 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
-    }
+      "supportsTablet": true,
+      "bundleIdentifier": "co.craftacademy.newsroom-april"
+    },
+    "android": {
+      "package": "co.craftacademy.newsroom-april"
+    },
+    "entryPoint": "node_modules/expo/AppEntry.js"
   }
 }
